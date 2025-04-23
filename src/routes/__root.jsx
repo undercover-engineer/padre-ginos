@@ -16,8 +16,6 @@ export const Route = createRootRoute({
           <div className="h-screen px-3 overflow-y-scroll hide-scrollbar ">
             <Header />
             <Outlet />
-            {/* Add a red quarter circle at the bottom right */}
-            <div></div>
           </div>
         </CartContext.Provider>
         <TanStackRouterDevtools position="bottom-right" />

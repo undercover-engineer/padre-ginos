@@ -8,8 +8,8 @@ export const Route = createFileRoute("/about")({
 function AboutSection(props) {
   return (
     <div className="font-inter">
-      <h3 className="font-bold text-xl">{props.title}</h3>
-      <p className="font-light">{props.content}</p>
+      <h3 className="font-bold text-xl 2xl:w-3/4 2xl:mx-auto">{props.title}</h3>
+      <p className="font-light 2xl:w-3/4 2xl:mx-auto">{props.content}</p>
     </div>
   );
 }
@@ -90,7 +90,7 @@ function About() {
         </div>
         <button
           onClick={() => setShowAll(!showAll)}
-          className="bg-primary text-white py-2 px-4 rounded-lg md:mt-14"
+          className="bg-primary text-white py-2 px-4 rounded-lg mt-8 md:mt-14 2xl:ml-36"
         >
           {showAll ? "Show less" : "Read more..."}
         </button>

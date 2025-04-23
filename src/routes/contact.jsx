@@ -20,34 +20,40 @@ function Contact() {
     },
   });
   return (
-    <div className="w-4/5 mx-auto font-inter">
-      <h2 className="font-jost font-bold text-3xl text-center mb-8">Contact</h2>
+    <div className="lg:w-3/5 2xl:w-5/12 w-full mx-auto font-inter border-2 border-primary rounded-xl py-14">
+      <div className="mb-8 pl-16 max-sm:w-5/6">
+        <h2 className="font-jost font-bold text-3xl">
+          Let's Chat, Reach Out to Us
+        </h2>
+        <p className="font-jost text-base w-3/4 md:text-lg mt-2">
+          Have questions or feedback. We're here to help. Send us a message and
+          we will respond within 24hrs
+        </p>
+      </div>
+
       {mutation.isSuccess ? (
         <h3>Submitted!</h3>
       ) : (
-        <div className="flex justify-center">
+        <div className="flex md:flex-row flex-col items-center md:justify-center">
           <div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXiEvd8Cjs6dv49EGIqPBbgnYR5M_NCt--ng&s"
-              alt="Padre Gino's logo"
-            />
+            <img src="/src/assets/images/slice1.png" alt="Slice of pizza" />
           </div>
-          <form className="flex flex-col w-1/2 lg:w-1/4 space-y-5 ml-10">
+          <form className="flex flex-col md:w-1/2 w-4/5 space-y-5 md:ml-10">
             <input
               name="name"
-              placeholder="John Doe"
-              className="border-2 border-[#D4D4D8] rounded-lg h-11 pl-3 focus:bg-[#fff1f1] focus:border-0 focus:outline-none focus:ring-0"
+              placeholder="Name"
+              className="rounded-lg h-11 pl-3 bg-[#fff1f1] border-0 focus:bg-[#ff6363] focus:outline-none focus:ring-0"
             />
             <input
               name="email"
               type="email"
               placeholder="Email"
-              className="border-2 border-[#D4D4D8] rounded-lg h-11 pl-3 focus:bg-[#fff1f1] focus:border-0 focus:outline-none focus:ring-0"
+              className="rounded-lg h-11 pl-3 bg-[#fff1f1] border-0 focus:bg-[#ff6363] focus:outline-none focus:ring-0"
             />
             <textarea
               name="message"
               placeholder="Message"
-              className="border-2 border-[#D4D4D8] rounded-lg pl-3 pt-2 h-28 focus:bg-[#fff1f1] focus:border-0 focus:outline-none focus:ring-0"
+              className="rounded-lg pl-3 pt-2 h-28 bg-[#fff1f1] border-0 focus:bg-[#ff6363] focus:outline-none focus:ring-0 "
             ></textarea>
             <button
               type="submit"

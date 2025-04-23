@@ -63,7 +63,7 @@ function Order() {
   }, []);
 
   return (
-    <div className="order-page pb-10 md:w-4/5 md:mx-auto md:col">
+    <div className="order-page pb-10 md:w-4/5 md:mx-auto md:co">
       <div className="order lg:w-1/2 lg:mx-auto">
         <h2 className="font-jost font-bold text-xl mb-6 md:text-2xl">
           <span className="border-primary border-2 rounded-full px-3">1</span>{" "}
@@ -87,7 +87,7 @@ function Order() {
                 onChange={(e) => setPizzaType(e.target.value)}
                 name="pizza-type"
                 value={pizzaType}
-                className="border-primary border-2 rounded-lg w-[95%] pl-2 py-2 block lg:w-3/4"
+                className="border-primary border-2 rounded-lg w-full pl-2 py-2 block 2xl:w-4/5"
               >
                 {pizzaTypes.map((pizza) => (
                   <option key={pizza.id} value={pizza.id}>
@@ -156,7 +156,7 @@ function Order() {
                   description={selectedPizza.description}
                   image={selectedPizza.image}
                 />
-                <p className="absolute top-0 right-0 font-light text-xl text-[#4b0404] md:font-semibold">
+                <p className="absolute top-0 right-0 2xl:right-32 font-light text-xl text-[#4b0404] md:font-semibold">
                   {price}
                 </p>
               </div>

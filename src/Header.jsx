@@ -36,32 +36,32 @@ export default function Header() {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } flex-col absolute top-full right-0 -mt-16 w-38 shadow-sm font-jost font-semibold md:flex md:flex-row md:static md:shadow-none md:top-0 md:mt-0 md:gap-6 md:text-xl`}
+        } flex-col  absolute max-sm:bg-[#ffdfdf] max-sm:bg-opacity-[0.3] max-sm:rounded-lg top-full right-0 -mt-16 w-38 shadow-sm font-jost font-semibold md:flex md:flex-row md:static md:shadow-none md:top-0 md:mt-0 md:gap-6 md:text-xl`}
       >
         <Link
           to={"/"}
-          className="px-4 py-2 hover:bg-gray-200"
+          className="px-4 py-2"
           onClick={() => setIsMenuOpen(false)}
         >
           Home
         </Link>
         <Link
           to={"/pizzaoftheday"}
-          className="px-4 py-2 hover:bg-gray-200"
+          className="px-4 py-2"
           onClick={() => setIsMenuOpen(false)}
         >
           Pizza Of The Day
         </Link>
         <Link
           to={"/about"}
-          className="px-4 py-2 hover:bg-gray-200"
+          className="px-4 py-2"
           onClick={() => setIsMenuOpen(false)}
         >
           About Us
         </Link>
         <Link
           to={"/contact"}
-          className="px-4 py-2 hover:bg-gray-200"
+          className="px-4 py-2"
           onClick={() => setIsMenuOpen(false)}
         >
           Contact

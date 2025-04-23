@@ -37,7 +37,7 @@ function PastOrdersRoute() {
 
   return (
     <div className="past-orders font-inter">
-      <table className="w-full">
+      <table className="w-full md:w-4/5 lg:w-3/5 2xl:w-1/2 md:mx-auto">
         <thead>
           <tr>
             <th>ID</th>
@@ -47,9 +47,15 @@ function PastOrdersRoute() {
         </thead>
         <tbody>
           {data.map((order) => (
-            <tr key={order.order_id} className="even:bg-[#ff9c9c] h-8">
+            <tr
+              key={order.order_id}
+              className="even:bg-[#ff9c9c] h-8 2xl:h-11 text-center"
+            >
               <td>
-                <button onClick={() => setFocusedOrder(order.order_id)}>
+                <button
+                  className="border-2 border-primary rounded-lg py-1 px-2 md:px-4"
+                  onClick={() => setFocusedOrder(order.order_id)}
+                >
                   {order.order_id}
                 </button>
               </td>
@@ -59,7 +65,7 @@ function PastOrdersRoute() {
           ))}
         </tbody>
       </table>
-      <div className="pages flex justify-evenly mt-6 items-center">
+      <div className="pages flex justify-evenly 2xl:justify-center 2xl:space-x-32 mt-6 items-center">
         <button
           disabled={page <= 1}
           onClick={() => setPage(page - 1)}

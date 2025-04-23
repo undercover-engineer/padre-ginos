@@ -14,7 +14,7 @@ const Pizza = (props) => {
       <img
         src={props.image}
         alt={props.name}
-        className="rounded-md md:mt-4 md:w-80 md:h-80"
+        className="rounded-lg md:mt-4 2xl:w-4/5"
       />
     </div>
   );
