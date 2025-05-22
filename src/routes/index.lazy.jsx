@@ -37,7 +37,7 @@ function Index() {
         }}
       ></div>
       <img
-        src="/src/assets/images/supreme.svg"
+        src="/assets/supreme.svg"
         alt="Supreme Pizza Large"
         className="absolute top-80 right-44 2xl:right-44 2xl:top-96 hidden xl:block object-contain w-[450px] h-[450px] 2xl:w-[600px] 2xl:h-[600px]"
       />

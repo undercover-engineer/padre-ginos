@@ -25,20 +25,35 @@ function Contact() {
         <h2 className="font-jost font-bold text-3xl">
           Let's Chat, Reach Out to Us
         </h2>
-        <p className="font-jost text-base w-3/4 md:text-lg mt-2">
+        <p className="font-jost text-base md:w-3/4 md:text-lg mt-2">
           Have questions or feedback. We're here to help. Send us a message and
           we will respond within 24hrs
         </p>
       </div>
-
       {mutation.isSuccess ? (
-        <h3>Submitted!</h3>
+        <div className="flex gap-2 items-center">
+          <h3 className="text-3xl font-jost font-semibold pl-16">Submitted</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#5cb85c"
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z"
+            />
+          </svg>
+        </div>
       ) : (
         <div className="flex md:flex-row flex-col items-center md:justify-center">
           <div>
-            <img src="/src/assets/images/slice1.png" alt="Slice of pizza" />
+            <img src="/assets/slice1.png" alt="Slice of pizza" />
           </div>
-          <form className="flex flex-col md:w-1/2 w-4/5 space-y-5 md:ml-10">
+          <form
+            onSubmit={mutation.mutate}
+            className="flex flex-col md:w-1/2 w-4/5 space-y-5 md:ml-10"
+          >
             <input
               name="name"
               placeholder="Name"
@@ -57,7 +72,7 @@ function Contact() {
             ></textarea>
             <button
               type="submit"
-              className="border-2 rounded-xl bg-primary text-white w-28 py-1 text-lg font-light"
+              className="rounded-lg bg-primary text-white w-28 py-1 text-lg font-light"
             >
               Submit
             </button>

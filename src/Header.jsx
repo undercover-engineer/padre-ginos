@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { CartContext } from "./contexts";
 import { Link } from "@tanstack/react-router";
-import logo from "./assets/images/logo.svg";
 
 export default function Header() {
   const [cart] = useContext(CartContext);
@@ -11,7 +10,7 @@ export default function Header() {
     <nav className="py-3 flex justify-between items-center mb-8 relative md:static lg:w-4/5 md:mx-auto">
       <Link to={"/"}>
         <img
-          src={logo}
+          src="/assets/logo.svg"
           alt="padre ginos logo"
           className="w-32 h-32 text-primary"
         />

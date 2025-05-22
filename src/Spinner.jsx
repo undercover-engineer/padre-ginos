@@ -1,9 +1,8 @@
-import pizza from "./assets/images/meat-lovers.svg";
 const Spinner = () => {
   return (
     <div className="h-screen flex items-center justify-center">
       <img
-        src={pizza}
+        src="/assets/meat-lovers.svg"
         alt="Loading..."
         className="w-20 h-20 object-contain animate-spin"
       />

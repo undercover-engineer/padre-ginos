@@ -1,7 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { usePizzaOfTheDay } from "../usePizzaOfTheDay";
-// import { priceConverter } from "../useCurrency";
 import { Link } from "@tanstack/react-router";
+import Spinner from "../Spinner";
 
 export const Route = createLazyFileRoute("/pizzaoftheday")({
   component: PizzaOfTheDay,
@@ -11,7 +11,7 @@ function PizzaOfTheDay() {
   const pizzaOfTheDay = usePizzaOfTheDay();
 
   if (!pizzaOfTheDay) {
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
 
   return (
@@ -53,7 +53,7 @@ function PizzaOfTheDay() {
         <div className="bg-primary w-10 h-2 md:w-20 mt-10 md:mt-10 md:mb-20 rounded-lg mb-10 ml-3"></div>
         <Link
           to="/order"
-          className="border-2 border-primary px-4 py-1 rounded-lg text-[#4b0404] text-center w-32 h-10 font-semibold font-jomolhari mb-20"
+          className=" bg-primary px-6 py-2 rounded-lg text-white text-center w-32 h-10 font-inter text-lg mb-20"
         >
           Order
         </Link>
@@ -68,7 +68,7 @@ function PizzaOfTheDay() {
           }}
         ></div>
         <img
-          src="/src/assets/images/supreme.svg"
+          src="/assets/supreme.svg"
           alt="Supreme Pizza Large"
           className="absolute top-80 right-40 hidden xl:block object-contain w-[400px] h-[400px] 2xl:right-32 2xl:top-64 2xl:w-[600px] 2xl:h-[600px]"
         />
