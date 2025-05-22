@@ -6,6 +6,8 @@ import Pizza from "../Pizza";
 import { CartContext } from "../contexts";
 import priceConverter from "../useCurrency";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 /**
  * We are making a new route for the order page.
  * We define what URL it's at, /order and what component it should render when the URL is visited
@@ -27,7 +29,7 @@ function Order() {
     // This prevents users from adding more cart items while the checkout is in progress
     setLoading(true);
 
-    await fetch("api/checkout", {
+    await fetch(`${apiUrl}/api/order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +53,7 @@ function Order() {
   async function fetchPizzaTypes() {
     await new Promise((resolve) => setTimeout(resolve, 3000)); // remove this later, just to show you the loading state
     // The fetch() method is used to make a network request to fetch pizza data from the server
-    const pizzasRes = await fetch("/api/pizzas");
+    const pizzasRes = await fetch(`${apiUrl}/api/pizzas`);
     // Converts the response into usable JSON data
     const pizzasJson = await pizzasRes.json();
     setPizzaTypes(pizzasJson);
